@@ -1,4 +1,4 @@
-git adArticles
+Articles
 ==========
 Simple application made with Symfony 2.8 and Doctrine.
 
