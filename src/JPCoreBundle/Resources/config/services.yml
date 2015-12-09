@@ -1,0 +1,16 @@
+services:
+    repository.article:
+        class: JPCoreBundle\Entity\Article
+        factory_service: doctrine.orm.default_entity_manager
+        factory_method: getRepository
+        arguments:
+            - JPCoreBundle\Entity\Article
+    service.article:
+        class: JPCoreBundle\Service\ArticleService
+        arguments:
+            entityManager: @doctrine.orm.default_entity_manager
+            articleRepository: @repository.article
+    twig.display:
+         class: JPCoreBundle\Twig\Extensions\DisplayExtension
+         tags:
+            - { name: twig.extension}

@@ -1,0 +1,4 @@
+jp_core:
+    resource: "@JPCoreBundle/Controller/"
+    type:     annotation
+    prefix:   /

@@ -1,0 +1,22 @@
+{% extends 'JPCoreBundle::layout.html.twig' %}
+
+{% block heading %}Create article{% endblock %}
+
+{% block breadcrumbs %}
+    <a href="{{ path('article_index') }}">&lt;&lt; Articles</a>
+{% endblock %}
+
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+{% block content %}
+    <div class="panel-body">
+        <form novalidate="novalidate" class="default form-horizontal" enctype="multipart/form-data" action="{{ form.vars.action }}" method="{{ form.vars.method }}">
+            {{ form_widget(form) }}
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-primary pull-right hotel-submit">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'JPCoreBundle::layout.html.twig' %}
+
+{% block heading %}{{ article.title }}{% endblock %}
+
+{% block breadcrumbs %}
+    <a href="{{ path('article_index') }}">&lt;&lt; Articles</a>
+{% endblock %}
+
+{% block content %}
+    <div class="panel-body">
+        <p>Author: <em>{{ article.author }}</em></p>
+        <p>{{ article.content }}</p>
+    </div>
+{% endblock %}
